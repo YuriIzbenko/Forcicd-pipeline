@@ -19,6 +19,15 @@ pipeline {
       }
     }
 
+    stage('Tests') {
+      steps {
+        script {
+          script scripts/build.sh
+        }
+
+      }
+    }
+
   }
   environment {
     registry = 'yuriizbenko/cicdpeline'
