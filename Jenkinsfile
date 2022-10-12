@@ -7,6 +7,12 @@ pipeline {
       }
     }
 
+    stage('Application Build') {
+      steps {
+        sh 'script scripts/build.sh'
+      }
+    }
+
   }
   environment {
     registry = 'yuriizbenko/cicdpeline'
