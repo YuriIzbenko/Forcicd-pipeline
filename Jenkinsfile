@@ -10,6 +10,15 @@ pipeline {
       }
     }
 
+    stage('Application Build') {
+      steps {
+        script {
+          echo
+        }
+
+      }
+    }
+
   }
   environment {
     registry = 'yuriizbenko/cicdpeline'
