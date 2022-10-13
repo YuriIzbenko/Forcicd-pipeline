@@ -19,6 +19,12 @@ pipeline {
       }
     }
 
+    stage('Docker Image Buld') {
+      steps {
+        sh 'docker build -t cicdpeline'
+      }
+    }
+
   }
   environment {
     registry = 'yuriizbenko/cicdpeline'
