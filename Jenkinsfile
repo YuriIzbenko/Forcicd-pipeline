@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
-    }
-
-  }
+  agent any
   stages {
     stage('Git Checkout') {
       steps {
@@ -26,7 +21,7 @@ pipeline {
 
     stage('Docker Image Buld') {
       steps {
-        sh 'docker build -t cicdpeline'
+        sh 'docker ps'
       }
     }
 
