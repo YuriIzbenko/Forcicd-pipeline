@@ -21,7 +21,7 @@ pipeline {
 
     stage('Docker Image Buld') {
       steps {
-        sh 'docker build'
+        sh 'docker build -t cicdpeline'
       }
     }
 
