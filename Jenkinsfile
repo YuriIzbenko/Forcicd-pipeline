@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  environment {
+    DOCKERHUB_LOGIN = credentials('DOCKERHUB_LOGIN')
+    DOCKERHUB_PASSWORD = credentials('DOCKERHUB_PASSWORD')
+  }
   stages {
     stage('Git Checkout') {
       steps {
