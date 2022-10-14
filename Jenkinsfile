@@ -27,7 +27,9 @@ pipeline {
 
     stage('Docker Image Push') {
       steps {
-        sh 'docker image push cicdpeline'
+        sh '''docker login --username yuriizbenko
+docker image push yuriizbenko/cicdpeline
+'''
       }
     }
 
