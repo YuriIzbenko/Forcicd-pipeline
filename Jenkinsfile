@@ -27,7 +27,7 @@ pipeline {
 
     stage('Docker Image Push') {
       steps {
-        sh 'docker image push'
+        sh 'docker image push yuriizbenko/cicdpeline'
       }
     }
 
