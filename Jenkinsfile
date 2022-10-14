@@ -43,7 +43,4 @@ pipeline {
     }
 
   }
-  environment {
-    registry = 'yuriizbenko/cicdpeline'
-  }
 }
