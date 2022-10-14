@@ -21,7 +21,13 @@ pipeline {
 
     stage('Docker Image Buld') {
       steps {
-        sh 'docker ps'
+        sh 'docker build -t cicdpeline'
+      }
+    }
+
+    stage('Docker Image Push') {
+      steps {
+        sh 'docker image push'
       }
     }
 
