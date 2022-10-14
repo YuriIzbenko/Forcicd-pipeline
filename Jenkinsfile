@@ -21,13 +21,20 @@ pipeline {
 
     stage('Docker Image Buld') {
       steps {
-        sh 'docker build -t cicdpeline .'
+        sh 'docker build -t yuriizbenko/cicdpeline:latest .'
+      }
+    }
+
+    stage('Docker Login') {
+      steps {
+        sh '''echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
+'''
       }
     }
 
     stage('Docker Image Push') {
       steps {
-        sh 'docker image push cicdpeline'
+        sh 'docker image push yuriizbenko/cicdpeline:latest'
       }
     }
 
