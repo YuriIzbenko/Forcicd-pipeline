@@ -21,14 +21,13 @@ pipeline {
 
     stage('Docker Image Buld') {
       steps {
-        sh 'docker build -t yuriizbenko/cicdpeline .'
+        sh 'docker build -t cicdpeline .'
       }
     }
 
     stage('Docker Image Push') {
       steps {
-        sh '''docker image push yuriizbenko/cicdpeline:latest
-'''
+        sh 'docker image push cicdpeline'
       }
     }
 
